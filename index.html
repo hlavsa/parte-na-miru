@@ -62,10 +62,11 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&display=swap"
       rel="stylesheet"
     />
     <!-- Robots Meta Tags -->
@@ -76,12 +77,12 @@
         font-family: "IBM Plex Mono", serif;
       }
       ::selection {
-        color: #6f72af;
+        color: #080924;
         background: #fcd6c3;
       }
     </style>
   </head>
-  <body class="h-screen flex justify-center items-center">
+  <body class="h-screen flex justify-center items-center antialiased">
     <div class="w-3/5 h-full bg-[#fcd6c3] flex justify-center items-center">
       <div id="default-carousel" class="relative w-full" data-carousel="slide">
         <!-- Carousel wrapper -->
@@ -222,26 +223,28 @@
         </button>
       </div>
     </div>
-    <div class="w-2/5 h-full bg-[#6f72af] flex justify-center items-center">
-      <div class="flex flex-col justify-between h-full">
-        <div class="flex-1">
-          <h1 class="font-['IBM_Plex_Mono'] text-2xl font-bold color-[#fcd6c3]">
+    <div class="w-2/5 h-full bg-[#6f72af] flex flex-col justify-between">
+      <div class="flex flex-col justify-center h-full pl-4 w-4/5">
+        <div class="">
+          <h1 class="font-['IBM_Plex_Mono'] text-4xl font-bold color-[#fcd6c3]">
             Parte na míru
           </h1>
           <p
-            class="font-['IBM_Plex_Mono'] text-lg border-l-8 border-[#fcd6c3] color-white"
+            class="font-['IBM_Plex_Mono'] text-xl border-l-8 border-[#fcd6c3] color-white pl-4"
           >
             Jedinečný způsob, jak si připomenout dobře prožitý život.
           </p>
           <a
             href="mailto:petraformankova@icloud.com?subject=Parte%20na%20m%C3%ADru"
-            class="font-['IBM_Plex_Mono'] text-lg font-bold color-[#fcd6c3] border-lg border-[#fcd6c3] hover:border-[#6f72af] hover:color-[#6f72af] hover:bg-[#fcd6c3]"
+            class="font-['IBM_Plex_Mono'] text-xl font-bold color-[#fcd6c3] border-lg border-[#fcd6c3] hover:border-[#6f72af] hover:color-[#6f72af] hover:bg-[#fcd6c3]"
             >Kontaktujte mě.</a
           >
         </div>
-        <div class="font-['IBM_Plex_Mono'] text-m color-[#fcd6c3]">
+      </div>
+      <div class="mt-auto pb-4">
+        <p class="font-['IBM_Plex_Mono'] text-m color-[#fcd6c3]">
           Petra Formánková / 2022
-        </div>
+        </p>
       </div>
     </div>
   </body>
