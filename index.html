@@ -82,36 +82,38 @@
       }
     </style>
     <script>
-      // Get the open modal button
-      const openModalButton = document.querySelector(
-        '[data-modal-toggle="defaultModal"]'
-      );
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the open modal button
+        const openModalButton = document.querySelector(
+          '[data-modal-toggle="defaultModal"]'
+        );
 
-      // Get the close modal button
-      const closeModalButton = document.querySelector(
-        '[data-modal-hide="defaultModal"]'
-      );
+        // Get the close modal button
+        const closeModalButton = document.querySelector(
+          '[data-modal-hide="defaultModal"]'
+        );
 
-      // Get the modal element
-      const modal = document.getElementById("defaultModal");
+        // Get the modal element
+        const modal = document.getElementById("defaultModal");
 
-      // Add a click event listener to open the modal
-      openModalButton.addEventListener("click", () => {
-        // Show the modal by removing the 'hidden' class
-        modal.classList.remove("hidden");
-        modal.classList.add("flex");
-        // Disable scrolling on the body
-        document.body.style.overflow = "hidden";
-      });
+        // Add a click event listener to open the modal
+        openModalButton.addEventListener("click", () => {
+          // Show the modal by removing the 'hidden' class
+          modal.classList.remove("hidden");
+          modal.classList.add("flex");
+          // Disable scrolling on the body
+          document.body.style.overflow = "hidden";
+        });
 
-      // Add a click event listener to close the modal
-      closeModalButton.addEventListener("click", () => {
-        // Hide the modal by adding the 'hidden' class
-        modal.classList.remove("flex");
-        modal.classList.add("hidden");
+        // Add a click event listener to close the modal
+        closeModalButton.addEventListener("click", () => {
+          // Hide the modal by adding the 'hidden' class
+          modal.classList.remove("flex");
+          modal.classList.add("hidden");
 
-        // Enable scrolling on the body
-        document.body.style.overflow = "auto";
+          // Enable scrolling on the body
+          document.body.style.overflow = "auto";
+        });
       });
     </script>
   </head>
