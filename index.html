@@ -83,174 +83,191 @@
       }
     </style>
   </head>
-  <body class="h-screen flex justify-center items-center antialiased">
-    <div class="w-3/5 h-full bg-[#fcd6c3] flex justify-center items-center">
-      <div id="default-carousel" class="relative w-4/5" data-carousel="slide">
-        <!-- Carousel wrapper -->
-        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-          <!-- Item 1 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img
-              src="/docs/images/carousel/carousel-1.svg"
-              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt="..."
-            />
+  <body class="antialiased">
+    <div class="h-screen flex justify-center items-center">
+      <div class="w-3/5 h-full bg-[#fcd6c3] flex justify-center items-center">
+        <div id="default-carousel" class="relative w-4/5" data-carousel="slide">
+          <!-- Carousel wrapper -->
+          <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="/docs/images/carousel/carousel-1.svg"
+                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+              />
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="/docs/images/carousel/carousel-2.svg"
+                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+              />
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="/docs/images/carousel/carousel-3.svg"
+                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+              />
+            </div>
+            <!-- Item 4 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="/docs/images/carousel/carousel-4.svg"
+                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+              />
+            </div>
+            <!-- Item 5 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="/docs/images/carousel/carousel-5.svg"
+                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+              />
+            </div>
           </div>
-          <!-- Item 2 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img
-              src="/docs/images/carousel/carousel-2.svg"
-              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt="..."
-            />
+          <!-- Slider indicators -->
+          <div
+            class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2"
+          >
+            <button
+              type="button"
+              class="w-3 h-3 rounded-full"
+              aria-current="true"
+              aria-label="Slide 1"
+              data-carousel-slide-to="0"
+            ></button>
+            <button
+              type="button"
+              class="w-3 h-3 rounded-full"
+              aria-current="false"
+              aria-label="Slide 2"
+              data-carousel-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              class="w-3 h-3 rounded-full"
+              aria-current="false"
+              aria-label="Slide 3"
+              data-carousel-slide-to="2"
+            ></button>
+            <button
+              type="button"
+              class="w-3 h-3 rounded-full"
+              aria-current="false"
+              aria-label="Slide 4"
+              data-carousel-slide-to="3"
+            ></button>
+            <button
+              type="button"
+              class="w-3 h-3 rounded-full"
+              aria-current="false"
+              aria-label="Slide 5"
+              data-carousel-slide-to="4"
+            ></button>
           </div>
-          <!-- Item 3 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img
-              src="/docs/images/carousel/carousel-3.svg"
-              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt="..."
-            />
-          </div>
-          <!-- Item 4 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img
-              src="/docs/images/carousel/carousel-4.svg"
-              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt="..."
-            />
-          </div>
-          <!-- Item 5 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img
-              src="/docs/images/carousel/carousel-5.svg"
-              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt="..."
-            />
+          <!-- Slider controls -->
+          <button
+            type="button"
+            class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev
+          >
+            <span
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+            >
+              <svg
+                class="w-4 h-4 text-white dark:text-gray-800"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 1 1 5l4 4"
+                />
+              </svg>
+              <span class="sr-only">Předchozí</span>
+            </span>
+          </button>
+          <button
+            type="button"
+            class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next
+          >
+            <span
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+            >
+              <svg
+                class="w-4 h-4 text-white dark:text-gray-800"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 9 4-4-4-4"
+                />
+              </svg>
+              <span class="sr-only">Další</span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="w-2/5 h-full bg-[#6f72af] flex flex-col justify-between">
+        <div class="flex flex-col justify-center h-full pl-12 w-4/5">
+          <div class="">
+            <h1
+              class="font-['IBM_Plex_Mono'] mb-12 text-5xl font-bold text-[#fcd6c3]"
+            >
+              Parte na míru
+            </h1>
+            <p
+              class="font-['IBM_Plex_Mono'] py-4 mb-8 text-xl border-l-[12px] border-[#fcd6c3] text-white pl-4"
+            >
+              Jedinečný způsob, jak si připomenout dobře prožitý život.
+            </p>
+            <p class="pt-8">
+              <a
+                href="mailto:petraformankova@icloud.com?subject=Parte%20na%20m%C3%ADru"
+                class="font-['IBM_Plex_Mono'] py-4 px-8 focus:outline-orange focus:z-10 focus:ring-4 focus:ring-gray-200 text-xl font-bold text-[#fcd6c3] border-4 rounded-lg border-[#fcd6c3] transition-colors duration-300 ease-in-out hover:text-[#6f72af] hover:bg-[#fcd6c3]"
+                >Kontaktujte mě</a
+              >
+            </p>
           </div>
         </div>
-        <!-- Slider indicators -->
-        <div
-          class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2"
-        >
-          <button
-            type="button"
-            class="w-3 h-3 rounded-full"
-            aria-current="true"
-            aria-label="Slide 1"
-            data-carousel-slide-to="0"
-          ></button>
-          <button
-            type="button"
-            class="w-3 h-3 rounded-full"
-            aria-current="false"
-            aria-label="Slide 2"
-            data-carousel-slide-to="1"
-          ></button>
-          <button
-            type="button"
-            class="w-3 h-3 rounded-full"
-            aria-current="false"
-            aria-label="Slide 3"
-            data-carousel-slide-to="2"
-          ></button>
-          <button
-            type="button"
-            class="w-3 h-3 rounded-full"
-            aria-current="false"
-            aria-label="Slide 4"
-            data-carousel-slide-to="3"
-          ></button>
-          <button
-            type="button"
-            class="w-3 h-3 rounded-full"
-            aria-current="false"
-            aria-label="Slide 5"
-            data-carousel-slide-to="4"
-          ></button>
+        <div class="mt-auto pb-4 pl-12 w-4/5">
+          <p class="font-['IBM_Plex_Mono'] text-m text-[#fcd6c3]">
+            Petra Formánková / 2022
+          </p>
         </div>
-        <!-- Slider controls -->
-        <button
-          type="button"
-          class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-          data-carousel-prev
-        >
-          <span
-            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-          >
-            <svg
-              class="w-4 h-4 text-white dark:text-gray-800"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 6 10"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M5 1 1 5l4 4"
-              />
-            </svg>
-            <span class="sr-only">Předchozí</span>
-          </span>
-        </button>
-        <button
-          type="button"
-          class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-          data-carousel-next
-        >
-          <span
-            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-          >
-            <svg
-              class="w-4 h-4 text-white dark:text-gray-800"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 6 10"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m1 9 4-4-4-4"
-              />
-            </svg>
-            <span class="sr-only">Další</span>
-          </span>
-        </button>
       </div>
     </div>
-    <div class="w-2/5 h-full bg-[#6f72af] flex flex-col justify-between">
-      <div class="flex flex-col justify-center h-full pl-12 w-4/5">
-        <div class="">
-          <h1
-            class="font-['IBM_Plex_Mono'] mb-12 text-4xl font-bold text-[#fcd6c3]"
-          >
-            Parte na míru
-          </h1>
-          <p
-            class="font-['IBM_Plex_Mono'] py-4 mb-8 text-xl border-l-[12px] border-[#fcd6c3] text-white pl-4"
-          >
-            Jedinečný způsob, jak si připomenout dobře prožitý život.
-          </p>
-          <p class="pt-8">
-            <a
-              href="mailto:petraformankova@icloud.com?subject=Parte%20na%20m%C3%ADru"
-              class="font-['IBM_Plex_Mono'] py-4 px-8 focus:outline-orange focus:z-10 focus:ring-4 focus:ring-gray-200 text-xl font-bold text-[#fcd6c3] border-4 rounded-lg border-[#fcd6c3] transition-colors duration-300 ease-in-out hover:text-[#6f72af] hover:bg-[#fcd6c3]"
-              >Kontaktujte mě</a
-            >
-          </p>
-        </div>
-      </div>
-      <div class="mt-auto pb-4 pl-12 w-4/5">
-        <p class="font-['IBM_Plex_Mono'] text-m text-[#fcd6c3]">
-          Petra Formánková / 2022
-        </p>
-      </div>
+    <div class="h-screen flex justify-center items-center">
+      <img
+        src="https://uploads-ssl.webflow.com/623c406ad1fda124b590fcd7/62459c307153b9839ed67bfe_Sn%C3%ADmek%20obrazovky%202022-03-31%20v%C2%A014.18.49.png"
+        loading="lazy"
+        sizes="100vw"
+        srcset="
+          https://uploads-ssl.webflow.com/623c406ad1fda124b590fcd7/62459c307153b9839ed67bfe_Sn%C3%ADmek%20obrazovky%202022-03-31%20v%C2%A014.18.49-p-500.png   500w,
+          https://uploads-ssl.webflow.com/623c406ad1fda124b590fcd7/62459c307153b9839ed67bfe_Sn%C3%ADmek%20obrazovky%202022-03-31%20v%C2%A014.18.49-p-800.png   800w,
+          https://uploads-ssl.webflow.com/623c406ad1fda124b590fcd7/62459c307153b9839ed67bfe_Sn%C3%ADmek%20obrazovky%202022-03-31%20v%C2%A014.18.49-p-1080.png 1080w,
+          https://uploads-ssl.webflow.com/623c406ad1fda124b590fcd7/62459c307153b9839ed67bfe_Sn%C3%ADmek%20obrazovky%202022-03-31%20v%C2%A014.18.49.png        1312w
+        "
+        alt=""
+        class="image-2"
+      />
     </div>
   </body>
 </html>
