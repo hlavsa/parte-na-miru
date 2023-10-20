@@ -101,6 +101,8 @@
           // Show the modal by removing the 'hidden' class
           modal.classList.remove("hidden");
           modal.classList.add("flex");
+          modal.classList.add("items-center");
+          modal.classList.add("justify-center");
           // Disable scrolling on the body
           document.body.style.overflow = "hidden";
         });
@@ -109,6 +111,8 @@
         closeModalButton.addEventListener("click", () => {
           // Hide the modal by adding the 'hidden' class
           modal.classList.remove("flex");
+          modal.classList.remove("items-center");
+          modal.classList.remove("justify-center");
           modal.classList.add("hidden");
 
           // Enable scrolling on the body
