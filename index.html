@@ -82,6 +82,22 @@
         background: #fcd6c3;
       }
     </style>
+    <script>
+      // Get modal and button elements
+      const modal = document.getElementById("defaultModal");
+      const closeBtn = document.querySelector(
+        '[data-modal-hide="defaultModal"]'
+      );
+
+      // Add click event listener to close button
+      closeBtn.addEventListener("click", () => {
+        // Hide modal
+        modal.classList.add("hidden");
+
+        // Enable body scrolling
+        document.body.style.overflow = "auto";
+      });
+    </script>
   </head>
   <body class="antialiased">
     <div class="h-screen flex justify-center items-center">
@@ -288,13 +304,13 @@
       >
         <div class="relative w-full max-w-2xl max-h-full">
           <!-- Modal content -->
-          <div class="relative bg-white rounded-lg shadow">
+          <div class="relative bg-[#6f72af] rounded-lg shadow">
             <!-- Modal header -->
             <div
               class="flex items-start justify-between p-4 border-b rounded-t"
             >
               <h2
-                class="font-['IBM_Plex_Mono'] text-center text-xl font-semibold text-gray-900"
+                class="font-['IBM_Plex_Mono'] text-center text-xl font-semibold text-white"
               >
                 Jaký je postup?
               </h2>
@@ -302,7 +318,7 @@
             <!-- Modal body -->
             <div class="p-6 space-y-6">
               <ol
-                class="max-w-md space-y-1 font-['IBM_Plex_Mono'] text-base leading-relaxed text-gray-900 list-decimal list-inside"
+                class="max-w-md space-y-1 font-['IBM_Plex_Mono'] text-base leading-relaxed text-white list-decimal list-inside"
               >
                 <li>points</li>
                 <li>points</li>
@@ -316,7 +332,7 @@
               <button
                 data-modal-hide="defaultModal"
                 type="button"
-                class="font-['IBM_Plex_Mono'] text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                class="font-['IBM_Plex_Mono'] font-['IBM_Plex_Mono'] py-4 px-8 focus:outline-orange focus:z-10 focus:ring-4 focus:ring-gray-200 text-xl font-bold text-[#6f72af] bg-[#fcd6c3] border-4 rounded-lg border-[#fcd6c3] transition-colors duration-300 ease-in-out hover:text-[#fcd6c3] hover:bg-[#6f72af]"
               >
                 Zavřít okno
               </button>
