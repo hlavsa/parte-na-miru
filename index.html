@@ -62,7 +62,6 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -83,18 +82,35 @@
       }
     </style>
     <script>
-      // Get modal and button elements
-      const modal = document.getElementById("defaultModal");
-      const closeBtn = document.querySelector(
+      // Get the open modal button
+      const openModalButton = document.querySelector(
+        '[data-modal-toggle="defaultModal"]'
+      );
+
+      // Get the close modal button
+      const closeModalButton = document.querySelector(
         '[data-modal-hide="defaultModal"]'
       );
 
-      // Add click event listener to close button
-      closeBtn.addEventListener("click", () => {
-        // Hide modal
+      // Get the modal element
+      const modal = document.getElementById("defaultModal");
+
+      // Add a click event listener to open the modal
+      openModalButton.addEventListener("click", () => {
+        // Show the modal by removing the 'hidden' class
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        // Disable scrolling on the body
+        document.body.style.overflow = "hidden";
+      });
+
+      // Add a click event listener to close the modal
+      closeModalButton.addEventListener("click", () => {
+        // Hide the modal by adding the 'hidden' class
+        modal.classList.remove("flex");
         modal.classList.add("hidden");
 
-        // Enable body scrolling
+        // Enable scrolling on the body
         document.body.style.overflow = "auto";
       });
     </script>
@@ -196,7 +212,7 @@
               class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none"
             >
               <svg
-                class="w-4 h-4 text-white"
+                class="w-4 h-4 text-[#6f72af]"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -222,7 +238,7 @@
               class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none"
             >
               <svg
-                class="w-4 h-4 text-white"
+                class="w-4 h-4 text-[#6f72af]"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -293,16 +309,14 @@
         </button>
       </div>
 
-      <!-- Modal toggle -->
-
       <!-- Main modal -->
       <div
         id="defaultModal"
         tabindex="-1"
         aria-hidden="true"
-        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+        class="fixed top-4 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full max-h-full"
       >
-        <div class="relative w-full max-w-2xl max-h-full">
+        <div class="relative w-full max-w-2xl max-h-full md:h-auto">
           <!-- Modal content -->
           <div class="relative bg-[#6f72af] rounded-lg shadow">
             <!-- Modal header -->
