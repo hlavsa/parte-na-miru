@@ -120,6 +120,67 @@
         });
       });
     </script>
+    <script>
+      // Get carousel elements
+      const carousel = document.getElementById("default-carousel");
+      const carouselItems = carousel.querySelectorAll("[data-carousel-item]");
+      const slideButtons = carousel.querySelectorAll(
+        "[data-carousel-slide-to]"
+      );
+      const prevButton = carousel.querySelector("[data-carousel-prev]");
+      const nextButton = carousel.querySelector("[data-carousel-next]");
+
+      let currentSlide = 0;
+
+      // Function to show a specific slide
+      function showSlide(slideIndex) {
+        if (slideIndex < 0 || slideIndex >= carouselItems.length) {
+          return;
+        }
+
+        carouselItems.forEach((item, index) => {
+          if (index === slideIndex) {
+            item.classList.remove("hidden");
+          } else {
+            item.classList.add("hidden");
+          }
+        });
+
+        slideButtons.forEach((button, index) => {
+          if (index === slideIndex) {
+            button.setAttribute("aria-current", "true");
+          } else {
+            button.setAttribute("aria-current", "false");
+          }
+        });
+
+        currentSlide = slideIndex;
+      }
+
+      // Event listeners for slide buttons
+      slideButtons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+          showSlide(index);
+        });
+      });
+
+      // Event listener for previous button
+      prevButton.addEventListener("click", () => {
+        if (currentSlide > 0) {
+          showSlide(currentSlide - 1);
+        }
+      });
+
+      // Event listener for next button
+      nextButton.addEventListener("click", () => {
+        if (currentSlide < carouselItems.length - 1) {
+          showSlide(currentSlide + 1);
+        }
+      });
+
+      // Initialize the carousel by showing the first slide
+      showSlide(0);
+    </script>
   </head>
   <body class="antialiased">
     <div class="h-screen flex flex-col lg:flex-row justify-center items-center">
